@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
       type : DataTypes.STRING,
       allowNull: false,
     },
-    recepientEmail: { 
+    recipientEmail: {
       type : DataTypes.STRING,
       allowNull: false,
 
@@ -30,7 +30,8 @@ module.exports = (sequelize, DataTypes) => {
     status:{
       type : DataTypes.ENUM,
       allowNull: false,
-      values:[ 'Pending' , 'Succes' , 'Failed' ],
+      values:[ 'Pending' , 'Success' , 'Failed' ],
+      defaultValue : 'Pending'
     },
     notificationtime: {
       type : DataTypes.DATE,
